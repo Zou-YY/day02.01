@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/qingjing.css">
+    <link rel="stylesheet" href="../css/position.css">
+    <link rel="stylesheet" href="../css/dataProStyle.css">
+    <link rel="stylesheet" href="../css/loading.css">
+    <link rel="stylesheet" href="../css/newStyle.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/echarts.js"></script>
+    <script src="../js/qingjing.js"></script>
+    <script src="../js/jquery.nicescroll.js"></script>
+    <script src="../js/loading.js"></script>
+    <script src="../js/newStyle.js"></script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header clearfix">
+        <h3 class="tit">人口与发展综合决策模拟支持系统</h3>
+        <i class="titi">|</i>
+        <span class="tits">模拟平台</span>
+        <a href="../index.html" class="home"></a>
+    </div>
+    <div id="qjmn">
+        <!-- 当前位置 -->
+        <p class="pos">您的当前位置：<span>国家核心</span>><span>情景模拟</span>><span>资源</span></p>
+        <!-- 方案 -->
+        <div class="inputName">
+            <input type="text" class="xmmc" placeholder="请输入项目名称">
+            <button class="save">保存</button>
+                <script>
+                    $(function(){
+                        $(".save").click(function(){
+                            // alert($(".xmmc").val());
+                        })
+                    })
+                </script>
+            <div class="fangAnWrap">
+                <button class="more"></button>
+                <div class="fangAn">
+                    <!-- <p class="fItem">
+                        <input type="checkbox" name="fangAn1" id="fangAn1">
+                        <label for="fangAn1">方案1</label>
+                    </p> -->
+                </div>
+                <div class="fnBtnWrap">
+                    <input type="button" value="编辑" class="btn edit">
+                    <input type="button" value="对比" class="btn contrast">
+                </div>
+            </div>
+        </div>
+        <div class="qjContect">
+            <div class="conLeft">
+                <!-- 政策变量 -->
+                <div class="bianLiang">
+                    <h4 class="blTit">人口政策变量</h4>
+                    <ul class="blBtnWrap">
+                        <li>服务业全要素生产率</li>
+                    </ul>
+                </div>
+                <div class="optionBtn">
+                    <div class="otBtnWrap">
+                        <button class="preBtn">上一项</button>
+                        <button class="nextBtn">下一项</button>
+                        <button class="runBtn">运行</button>
+                    </div>
+                </div>
+                <!-- 模拟结果 -->
+                <div class="jieGuo">
+                    <h4 class="jgTit">模拟结果</h4>
+                    <i class="mgfBtn"></i>
+                    <div class="jgImgWrap">
+                        <!-- <img src="../img/模拟结果/资源.jpg" alt="" style="width: 100%;height: 100%"> -->
+                        <!-- <img src="../img/模拟结果/人口.jpg" alt="" style="width: 100%;height: 100%"> -->
+                        <!-- <img src="../img/模拟结果/能源.jpg" alt="" style="width: 100%;height: 100%"> -->
+                        <img src="../img/模拟结果/经济.jpg" alt="" style="width: 100%;height: 100%">
+                        <!-- <img src="../img/模拟结果/环境.jpg" alt="" style="width: 100%;height: 100%"> -->
+                        <!-- <img src="../img/模拟结果/财政.jpg" alt="" style="width: 100%;height: 100%"> -->
+                    </div>
+                    <div class="mask"></div>
+                    <div class="bigPic">
+                        <i class="close"></i>
+                        <!-- 添加bImgWrap class名 -->
+                        <!-- <div class="ziYuan bImgWrap">
+                            <img src="../img/模拟结果/资源.jpg" alt="">
+                            <ul class="imgMask ziYuanMask">
+                                <li class="danWeiGDP"></li>
+                                <li class="senLinmj"></li>
+                                <li class="jianSheyd"></li>
+                                <li class="nongYeyd"></li>
+                                <li class="zongYongsl"></li>
+                                <li class="yongShuiyl"></li>
+                                <li class="senLinfgl"></li>
+                                <li class="gengDimj"></li>
+                                <li class="nongYeys"></li>
+                                <li class="juMinys"></li>
+                                <li class="gongYeys"></li>
+                            </ul>
+                        </div> -->
+                        <!-- <div class="renKou bImgWrap">
+                            <img src="../img/模拟结果/人口.jpg" alt="">
+                            <ul class="imgMask renKouMask">
+                                <li class="chuShengRenKou"></li>
+                                <li class="zongRenKou"></li>
+                                <li class="qiWangShouMing"></li>
+                                <li class="pingJunQiWang"></li>
+                                <li class="fifteen"></li>
+                                <li class="fifTsix"></li>
+                                <li class="fifTfif"></li>
+                                <li class="sixteen"></li>
+                                <li class="sixTfif"></li>
+                                <li class="zongFuYang"></li>
+                                <li class="laoRenFuYang"></li>
+                                <li class="erTongFuYang"></li>
+                            </ul>
+                        </div> -->
+                        <!-- <div class="nengYuan bImgWrap">
+                            <img src="../img/模拟结果/能源.jpg" alt="">
+                            <ul class="imgMask nengYuanMask">
+                                <li class="nyRenJun"></li>
+                                <li class="nyShiJiGDP"></li>
+                                <li class="nyDianLixf"></li>
+                                <li class="nyDianLish"></li>
+                                <li class="nyZongFa"></li>
+                                <li class="nyFengFa"></li>
+                                <li class="nyMeiFa"></li>
+                                <li class="nyShiFa"></li>
+                                <li class="nyTianFa"></li>
+                                <li class="nyHeFa"></li>
+                                <li class="nyKeFa"></li>
+                                <li class="nyMeiXu"></li>
+                                <li class="nyShiXu"></li>
+                                <li class="nyTianXu"></li>
+                                <li class="nyTaiFa"></li>
+                            </ul>
+                        </div> -->
+                        <div class="jingJi bImgWrap">
+                            <img src="../img/模拟结果/经济.jpg" alt="">
+                            <ul class="imgMask jingJiMask">
+                                <li class="jjGuoSheng"></li>
+                                <li class="jjLaoSheng"></li>
+                                <li class="jjShanJie"></li>
+                                <li class="jjShanZi"></li>
+                                <li class="jjShiYe"></li>
+                                <li class="jjJingHuo"></li>
+                                <li class="jjNongZong"></li>
+                                <li class="jjGongZong"></li>
+                                <li class="jjFuZong"></li>
+                                <li class="jjZongJiu"></li>
+                                <li class="jjShanJiu"></li>
+                                <li class="jjNongZongJiu"></li>
+                                <li class="jjGongZongJiu"></li>
+                                <li class="FuZongJiu"></li>
+                            </ul>
+                        </div>
+                        <!-- <div class="huanJing bImgWrap">
+                            <img src="../img/模拟结果/环境.jpg" alt="">
+                            <ul class="imgMask huanJingMask">
+                                <li class="hjMeiXiao"></li>
+                                <li class="hjRenPai"></li>
+                                <li class="hjErSPai"></li>
+                                <li class="hjShiXiao"></li>
+                                <li class="hjErCPai"></li>
+                                <li class="hjDanPai"></li>
+                                <li class="hjTianXiao"></li>
+                            </ul>
+                        </div> -->
+                        <!-- <div class="caiZheng bImgWrap">
+                            <img src="../img/模拟结果/财政.jpg" alt="">
+                            <ul class="imgMask caiZhengMask">
+                                <li class="czShiYe"></li>
+                                <li class="czZhengZhi"></li>
+                                <li class="czJiNi"></li>
+                                <li class="czRenJunShou"></li>
+                                <li class="czZhengTou"></li>
+                                <li class="czJiZhi"></li>
+                                <li class="czJiaoZhi"></li>
+                                <li class="czPinBi"></li>
+                                <li class="czShiChu"></li>
+                                <li class="czZongTou"></li>
+                                <li class="czShiTou"></li>
+                                <li class="czGuoZong"></li>
+                                <li class="czGongJi"></li>
+                                <li class="czChengJiao"></li>
+                                <li class="czChengShi"></li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="conRight">
+                <strong class="dataTit">总和生育率</strong>
+                <!-- 下拉框 -->
+                <div class="selectWrap">
+                    <div class="selTop">
+                        <p class="select">2000</p>
+                        <span class="selectMore"></span>
+                    </div>
+                    <div id="boxscroll">
+                        <ul class="options">
+                            <li>2000</li>
+                            <li>2001</li>
+                            <li>2002</li>
+                            <li>2003</li>
+                            <li>2004</li>
+                            <li>2005</li>
+                            <li>2006</li>
+                            <li>2007</li>
+                            <li>2008</li>
+                            <li>2009</li>
+                            <li>2010</li>
+                            <li>2011</li>
+                            <li>2012</li>
+                            <li>2013</li>
+                            <li>2014</li>
+                            <li>2015</li>
+                            <li>2016</li>
+                            <li>2017</li>
+                            <li>2018</li>
+                            <li>2019</li>
+                        </ul>
+                    </div>
+                </div>
+               <!-- 下拉框结束 -->
+
+                <p class="dataBtn">
+                    <button id="dataImport">数据导入</button>
+                    <button id="dataExport">数据导出</button>
+                    <button id="dataEdit">编辑</button>
+                    <!-- 添加loading -->
+                    <button id="dataSave" onclick="loading()">保存</button>
+                </p>
+
+                <!-- 上传文件 -->
+                <div class="importMask">
+                    <div class="impCon">
+                        <h5>数据上传</h5>
+                        <p class="impTit">请选择上传文件：</p>
+                        <form id="uploadForm" class="fileForm" action="" method="POST"  enctype="multipart/form-data" target="framFile" onsubmit="return check();">
+                            <input type="file" id="uploadFile" name="roomFile"  accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" onchange="input.value=this.value">
+                            <input id="input" style="width:50%; height:30pt; background: rgba(255,255,255,0)"/>
+                            <a href="#" class="demoDown">下载文件模板</a>
+                            <p class="impBtn">
+                                <button id="fileCancel" >取消</button>
+                                <button id="fileSubmit">上传</button>
+                            </p>
+                        </form>
+                        <iframe id="framFile" name="framFile" style="display:none;"></iframe>
+                        
+                    </div>
+                </div>
+
+                <!-- 数据导出 -->
+                <div class="exportMask">
+                    <div class="expCon">
+                        <h5>选择文件格式</h5>
+                        <ul class="radioWrap clearfix">
+                            <li>
+                                <input type="radio" name="tableTyel" id="xls" value="xls">
+                                <label for="xls">xls</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="tableTyel" id="xlsx" value="xlsx">
+                                <label for="xlsx">xlsx</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="tableTyel" id="csv" value="csv">
+                                <label for="csv">csv</label>
+                            </li>
+                        </ul>
+                        <p class="expBtnWrap">
+                            <button class="expSure">确定</button>
+                            <button class="expCancel">取消</button>
+                        </p>
+                    </div>
+                </div>
+                <script>
+                    $(function(){
+                        $(".expSure").click(function(){
+                            alert($("input:radio:checked").val())
+                        })
+                    })
+                </script>
+
+                <!-- ECharts -->
+                <div class="dataChart"  id="main" auto-resize></div>
+                <!-- 表格 -->
+                <div class="tableWrap">
+                    <div class="dataTable">
+                        <table class="dTab" cellspadding = "0" cellspacing = "0">
+                            <thead>
+                                <tr>
+                                    <th>年份</th>
+                                    <th>人口</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2017</td>
+                                    <td>2017</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <ul class="fList">
+                    <li>
+                        <span></span>
+                        <i>方案一</i>
+                    </li>
+                </ul>
+                <div class="chBtn">
+                    <button id="formBtn">表格</button>
+                    <button id="lineBtn" style="background: #0cc">折线</button>
+                    <button id="barBtn">柱状图</button>
+                </div>
+            </div>
+            <script>
+                // 基于准备好的dom，初始化echarts实例
+        
+            </script>
+        </div>
+    </div>
+    <div class="saveTc">
+        <i class="tcClose"></i>
+        <div class="tcCon">
+            <p class="tcText">已创人口流动项目，是否保存？</p>
+            <p class="tcBtnWrap">
+                <button class="tcCancle">取消</button>
+                <button class="tcSure">确定</button>
+            </p>
+        </div>
+    </div>
+    <div class="tcMask"></div>
+</body>
+</html>

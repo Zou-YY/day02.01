@@ -1,0 +1,38 @@
+.alertWrap {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,5,55,.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 99999999999;
+}
+.alert {
+    width: 30vw;
+    height: 30vh;
+    background: linear-gradient(to right top, #328fb8, #554eab);
+    margin: auto;
+    position: relative;
+    border-radius: 5px;
+}
+.alertCon {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5vw;
+    line-height: 30vh;
+}
+.alertBtn {
+    width: 7vw;
+    height: 4vh;
+    background: #00b1e5;
+    font-size: 1.1vw;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 3vw;
+    bottom: 3vh;
+    border-radius: 3px;
+}
